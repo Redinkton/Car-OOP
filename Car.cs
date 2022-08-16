@@ -25,11 +25,11 @@ namespace Vehicle
                 return Math.Round(result,1);         
         }
         //сколько сможет проехать авто с грузом
-        public double ResidualDistanceWithCargo(double cargo,double averageFuelConsumption, double fuelInTank)
+        public double ResidualDistanceWithCargo(double cargo,double averageFuelConsumption, double fuelTank)
         {    
                 double withCargo = cargo * 4;
                 double fuelСonsumptionWithPeople = ((averageFuelConsumption / 100) * withCargo) + averageFuelConsumption;
-                double result = fuelInTank * 100 / fuelСonsumptionWithPeople;
+                double result = fuelTank * 100 / fuelСonsumptionWithPeople;
             return Math.Round(result, 1);
         }
         public void TimeLeft(double fuelInTank, double speed, double averageFuelConsumption, double i)
