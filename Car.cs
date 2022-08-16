@@ -59,7 +59,7 @@ namespace Vehicle
             Console.WriteLine($"Датчики: сможем проехать {i}км");
             return i;
         }
-        public double SensorWithCargo(int cargo)
+        public double SensorWithCargo(double cargo)
         {
             double i = ResidualDistanceWithCargo(cargo,AverageFuelConsumption, FuelTank);
             Console.WriteLine($"Датчики: сможем проехать {i}км");
