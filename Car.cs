@@ -32,7 +32,7 @@ namespace Vehicle
                 double result = fuelTank * 100 / fuelСonsumptionWithPeople;
             return Math.Round(result, 1);
         }
-        public void TimeLeft(double fuelInTank, double speed, double averageFuelConsumption, double i)
+        public void TimeLeft(double speed, double averageFuelConsumption, double i)
         {
             Console.WriteLine("Сколько километров нам нужно проехать?");
             int km = int.Parse(Console.ReadLine());
