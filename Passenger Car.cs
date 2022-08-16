@@ -20,12 +20,12 @@
                 Console.Clear();
                 Console.WriteLine("Отлчично, должны поместиться!");
                 i =SensorWithPeople(People);
-                TimeLeft(FuelTank, Speed, AverageFuelConsumption,i);
+                TimeLeft(Speed, AverageFuelConsumption,i);
             }
             else if (People == 0)
             {
                 i = SensorEmpty();
-                TimeLeft(FuelTank, Speed, AverageFuelConsumption,i);
+                TimeLeft(Speed, AverageFuelConsumption,i);
             }
             else
             {
