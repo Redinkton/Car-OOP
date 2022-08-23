@@ -12,7 +12,7 @@
         {
             Console.Clear();
             SensorEmpty();
-            Console.WriteLine("Сейчас поедем дрифтовать!");
+            Output.StartGoodSport();    
         }
     }
 

@@ -12,25 +12,39 @@
         public void Start()
         {
             Console.Clear();
-            Console.WriteLine("Сколько кило груза повезем сегодня?");
+            Output.AmountCargo();
             Cargo = int.Parse(Console.ReadLine());
             if (Cargo >= 1 & Cargo <= 1000)
             {
                 Console.Clear();
                 
-                Console.WriteLine("Отлчично, можем ехать!");
+                Output.StartGood();
                 SensorWithCargo(Cargo);
 
             }
             else if (Cargo == 0)
             {
-                Console.WriteLine("Сегодня на легке!");
+                Output.StartGood();
                 SensorEmpty();
             }
-            else
+            else 
             {
-                Console.WriteLine("Куда столько взял, ты видел моё гнилое днище? Давай разгружай.");
+                Output.StartBadCargo();
             }
+        }
+        //сколько сможет проехать авто с грузом
+        public double ResidualDistanceWithCargo(double cargo, double averageFuelConsumption, double fuelTank)
+        {
+            double withCargo = cargo * 4;
+            double fuelСonsumptionWithPeople = ((averageFuelConsumption / 100) * withCargo) + averageFuelConsumption;
+            double result = fuelTank * 100 / fuelСonsumptionWithPeople;
+            return Math.Round(result, 1);
+        }
+        public double SensorWithCargo(int cargo)
+        {
+            double i = ResidualDistanceWithCargo(cargo, AverageFuelConsumption, FuelTank);
+            Output.Sensor(i);
+            return i;
         }
     }
 }
