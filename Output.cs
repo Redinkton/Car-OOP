@@ -21,6 +21,7 @@ namespace Vehicle
         public static void DistanceBad(int km) => Console.WriteLine($"Мы не можем проехать {km}км, давай сначала на заправку!");
         public static void DistanceGood(double result) => Console.WriteLine($"По времени нам ехать: {Math.Round(result * 60, 0)} минут(ы)");
         public static void Sensor(double i)=> Console.WriteLine($"Датчики: сможем проехать {i}км");
+        public static void BadChoice () => Console.WriteLine("Дам время подумать и выбрать еще раз!!!!");
 
 
     }

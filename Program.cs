@@ -21,7 +21,7 @@ class Program
             case 3:
                 truckCar.Start();
                 break;
-            default: Console.WriteLine("Дам время подумать и выбрать еще раз!!!!");
+            default: Output.BadChoice();
                 goto M;
         }
     }
