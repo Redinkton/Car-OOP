@@ -1,8 +1,8 @@
 ﻿namespace Vehicle
 {
-    internal class Sport_Car : Car
+    internal class SportCar : Car
     {
-        public Sport_Car()
+        public SportCar()
         {
             AverageFuelConsumption = 15.6;
             FuelTank = 37;
